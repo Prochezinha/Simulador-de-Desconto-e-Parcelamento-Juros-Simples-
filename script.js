@@ -8,4 +8,9 @@ document.addEventlistener('DOMcontentLoaded'), function () {
  function toNumber(vaL) {
    if (typeof vaL === 'number') return vaL;
    if (!vaL && vaL !== 0) return NaN;
-   return parseFloat()
+   return parseFloat(String(vaL).trim().replace(',','.'));
+ }
+ const form = document.getElementById('form');
+ const erro = document.getElementById('erro');
+ const resultados = document.getElementById('resultados');
+ 
